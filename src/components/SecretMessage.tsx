@@ -12,7 +12,7 @@ export const SecretMessage = () => {
   const checkPassword = (e: React.FormEvent) => {
     e.preventDefault();
     // Assuming nickname is "nick" for demonstration, but user can change it
-    if (password.toLowerCase() === "nick" || password.toLowerCase() === "baby" || password.toLowerCase() === "love") {
+    if (password.toLowerCase() === "moonly" || password.toLowerCase() === "darling" || password.toLowerCase() === "sweetheart") {
       setUnlocked(true);
       setError(false);
     } else {
@@ -37,7 +37,7 @@ export const SecretMessage = () => {
                 <div className="p-6 bg-rose-50 rounded-full border-4 border-rose-300 shadow-lg">
                   <Lock size={60} className="text-rose-500" />
                 </div>
-                <motion.div 
+                <motion.div
                   className="absolute -top-4 -right-4 p-3 bg-white rounded-full text-rose-500 shadow-md"
                   animate={{ rotate: [0, 20, -20, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
@@ -98,7 +98,7 @@ export const SecretMessage = () => {
                 </motion.p>
               </div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.5 }}

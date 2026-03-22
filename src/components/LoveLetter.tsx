@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export const LoveLetter = () => {
-  const letters = "I may not be perfect, but my love for you is. Even my worst days are better because you exist. I'm sorry for my mistakes; you deserve the world.".split(" ");
+  const letters = "I may not be perfect, but my love for you is. Even my worst days are better because you exist. I'm sorry for my mistakes; you deserve the world. I know I'm not the best but I'll try my best for you. I love you so much. I'm sorry for not being the best boyfriend but I'll try my best for you. I love you so much. Sometimes I make mistakes, but I never wanted to hurt you even a little. Please forgive me. I promise to be a better boyfriend to you.".split(" ");
 
   return (
     <section id="love-letter" className="min-h-screen py-24 flex items-center justify-center p-6 bg-rose-50/50">
@@ -18,7 +18,7 @@ export const LoveLetter = () => {
           </motion.div>
         </div>
 
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -42,7 +42,7 @@ export const LoveLetter = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

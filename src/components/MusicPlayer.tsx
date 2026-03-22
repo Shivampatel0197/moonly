@@ -9,7 +9,7 @@ export const MusicPlayer = () => {
 
   useEffect(() => {
     // Piano music URL (romantic instrumental)
-    const audio = new Audio("https://pixabay.com/music/wedding-romantic-love-piano-valentines-day-164819/");
+    const audio = new Audio("https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/paulyudin-romantic-love-piano-valentines-day-164819%20(1).mp3");
     audio.loop = true;
     audioRef.current = audio;
 
