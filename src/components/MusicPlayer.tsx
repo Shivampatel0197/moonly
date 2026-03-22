@@ -9,7 +9,7 @@ export const MusicPlayer = () => {
 
   useEffect(() => {
     // Piano music URL (romantic instrumental)
-    const audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+    const audio = new Audio("https://pixabay.com/music/wedding-romantic-love-piano-valentines-day-164819/");
     audio.loop = true;
     audioRef.current = audio;
 
