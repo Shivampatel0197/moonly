@@ -7,12 +7,12 @@ import { X, Heart, Maximize2 } from "lucide-react";
 
 // Mock memories data (since we'll connect Supabase later)
 const memories = [
-  { id: 1, url: "https://images.unsplash.com/photo-1516589174184-c6852b514b48", caption: "The day we met...", color: "bg-rose-100" },
-  { id: 2, url: "https://images.unsplash.com/photo-1518199266791-5375a02c9b24", caption: "Our first sunset trip", color: "bg-pink-100" },
-  { id: 3, url: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3", caption: "Making memories together", color: "bg-lavender-100" },
-  { id: 4, url: "https://images.unsplash.com/photo-1522673607200-1648832cee98", caption: "Those little moments", color: "bg-rose-50" },
-  { id: 5, url: "https://images.unsplash.com/photo-1516589174184-c6852b514b48", caption: "Forever to go", color: "bg-pink-50" },
-  { id: 6, url: "https://images.unsplash.com/photo-1518199266791-5375a02c9b24", caption: "My everything", color: "bg-lavender-50" },
+  { id: 1, url: "https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/Snapchat-1124493470.jpg", caption: "My cute spidey...", color: "bg-rose-100" },
+  { id: 2, url: "https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/signal-2026-03-22-21-19-28-039-8.jpg", caption: "Our first picture together", color: "bg-pink-100" },
+  { id: 3, url: "https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/Snapchat-516410318.jpg", caption: "Making memories together", color: "bg-lavender-100" },
+  { id: 4, url: "https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/Snapchat-1286011400.jpg", caption: "My little drama Queen", color: "bg-rose-50" },
+  { id: 5, url: "https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/signal-2026-03-22-21-19-28-039-6.jpg", caption: "Forever to go", color: "bg-pink-50" },
+  { id: 6, url: "https://mwlvbnjosarfjkzntouj.supabase.co/storage/v1/object/public/memories/Snapchat-1721624858.jpg", caption: "My heroine, queen of my heart, and myeverything", color: "bg-lavender-50" },
 ];
 
 export const Gallery = () => {
@@ -22,7 +22,7 @@ export const Gallery = () => {
     <section className="py-24 px-6 bg-white/20 backdrop-blur-md">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,10 +45,10 @@ export const Gallery = () => {
               onClick={() => setSelectedPhoto(photo)}
               className="group relative cursor-pointer overflow-hidden rounded-3xl shadow-xl aspect-square"
             >
-              <Image 
-                src={photo.url} 
-                alt={photo.caption} 
-                fill 
+              <Image
+                src={photo.url}
+                alt={photo.caption}
+                fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-rose-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-6 text-white">
@@ -68,14 +68,14 @@ export const Gallery = () => {
               className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-6"
               onClick={() => setSelectedPhoto(null)}
             >
-              <button 
+              <button
                 className="absolute top-10 right-10 text-white hover:rotate-90 transition-transform p-2 bg-white/10 rounded-full"
                 onClick={() => setSelectedPhoto(null)}
               >
                 <X size={32} />
               </button>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ scale: 0.8, y: 50 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.8, y: 50 }}
@@ -83,10 +83,10 @@ export const Gallery = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative flex-1 bg-black">
-                  <Image 
-                    src={selectedPhoto.url} 
-                    alt={selectedPhoto.caption} 
-                    fill 
+                  <Image
+                    src={selectedPhoto.url}
+                    alt={selectedPhoto.caption}
+                    fill
                     className="object-contain"
                   />
                 </div>
